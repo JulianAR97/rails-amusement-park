@@ -1,0 +1,51 @@
+<h1>Signup</h1>
+<%= form_for @user do |f| %>
+  
+  <div class="form-group">
+    <%= f.label :name %>
+    <br>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :height %>
+    <br>
+    <%= f.number_field :height %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :happiness %>
+    <br>
+    <%= f.number_field :happiness %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :nausea %>
+    <br>
+    <%= f.number_field :nausea %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tickets %>
+    <br>
+    <%= f.number_field :tickets %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label "Are You the Theme Park Owner?" %>
+    <%= f.check_box :admin, class: 'form-check-input' %>
+  </div>
+
+  <div class="actions">
+    <br>
+    <%= f.submit "Create User"%>
+  </div>
+
+<% end %>
